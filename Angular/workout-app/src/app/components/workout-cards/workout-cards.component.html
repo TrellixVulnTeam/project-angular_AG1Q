@@ -1,5 +1,5 @@
 <ul *ngFor="let workout of workoutList" class="d-flex flex-row">
-    <a routerLink="{{workout.id}}" routerLinkActive="active" class="link-card">
+    <a routerLink="{{workout._id}}" routerLinkActive="active" class="link-card">
         <li class="card shadow" >
             <img src="{{workout.imageurl}}" class="cardimage"/>
             <h1 class="card-head-calorie">{{workout.Calorieburnperhour}} Calories</h1>
