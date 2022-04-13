@@ -9,6 +9,12 @@ export class WorkoutsComponent implements OnInit {
 
   constructor() { }
 
+  show: boolean = false
+
+  toggleShow(){
+    this.show = !this.show
+  }
+
   ngOnInit(): void {
   }
 
