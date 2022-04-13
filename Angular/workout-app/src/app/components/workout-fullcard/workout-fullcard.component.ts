@@ -13,14 +13,14 @@ export class WorkoutFullcardComponent implements OnInit {
 
   id : string = ""
 
-  workoutDetail = {}
+  workoutDetail: any = {}
 
   ngOnInit(): void {
     this.route.params.subscribe(param => this.id = param['id'])
 
 
     this.fetchData.getWorkoutData(this.id)
-    .subscribe(data => this.workoutDetail = data)
+    .subscribe((data: any) => this.workoutDetail = data)
   }
 
 }

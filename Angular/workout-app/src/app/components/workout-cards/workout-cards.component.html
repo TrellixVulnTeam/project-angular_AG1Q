@@ -1,4 +1,4 @@
-<ul *ngFor="let workout of workoutList" class="list-item-container">
+<ul *ngFor="let workout of workoutList" class="d-flex flex-row">
     <a routerLink="{{workout.id}}" routerLinkActive="active" class="link-card">
         <li class="card shadow" >
             <img src="{{workout.imageurl}}" class="cardimage"/>
