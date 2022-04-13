@@ -4,9 +4,9 @@
         <img [src]="workoutDetail.imageurl" class="card-image"/>
         <div class="card-content">
             <h1 class="card-heading">{{workoutDetail.heading}}</h1>
-            <p class="card-calories">Loss of Weight : <span class="calorie"> Calorie/hr</span></p>
-            <h1 class="card-descrip">Description</h1>
-            <p class="card-para"></p>
+            <p class="card-calories">Loss of Weight : <span class="calorie">{{workoutDetail.Calorieburnperhour}} Calorie/hr</span></p>
+            <h1 class="card-descrip">Description:</h1>
+            <p class="card-para"> {{workoutDetail.fulldiscription}}</p>
         </div>
     </div>
     <!-- <div class="video-player">
