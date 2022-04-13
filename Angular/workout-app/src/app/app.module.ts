@@ -13,6 +13,8 @@ import { LoginRegisterComponent } from './components/login-register/login-regist
 import { WorkoutsComponent } from './components/workouts/workouts.component';
 import { WorkoutCardsComponent } from './components/workout-cards/workout-cards.component';
 import { WorkoutFullcardComponent } from './components/workout-fullcard/workout-fullcard.component';
+import { RegisterComponent } from './components/register/register.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,12 +27,15 @@ import { WorkoutFullcardComponent } from './components/workout-fullcard/workout-
     LoginRegisterComponent,
     WorkoutsComponent,
     WorkoutCardsComponent,
-    WorkoutFullcardComponent
+    WorkoutFullcardComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

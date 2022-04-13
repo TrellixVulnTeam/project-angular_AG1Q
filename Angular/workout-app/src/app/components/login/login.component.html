@@ -1,12 +1,12 @@
 <h1 class='title'>Login Form</h1>
-<form class='form-card' autoComplete='off'>
+<form class='form-card' autoComplete='off' (submit)="onSubmit(email.value, password.value)">
     <div class='input-card'>
         <label class='label' for="email">Email Address</label>
-        <input placeholder='Enter email' class='form-control' type="text" id="email"/>
+        <input placeholder='Enter email' #email name="email" class='form-control' type="text" id="email"/>
     </div>
     <div class='input-card'>
         <label class='label' for="password">Password</label>
-        <input placeholder='Enter password' class='form-control' type="password" id="password"/>
+        <input placeholder='Enter password' #password name="password" class='form-control' type="password" id="password"/>
     </div>
-    <button class='button' type="button">Login</button>
+    <button class='button' type="submit">Login</button>
 </form>

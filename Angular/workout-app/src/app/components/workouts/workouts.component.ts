@@ -11,6 +11,10 @@ export class WorkoutsComponent implements OnInit {
 
   show: boolean = false
 
+  sortItem: Array<string> = ['Low to High', 'High to Low']
+
+  selectSort : string = ""
+
   toggleShow(){
     this.show = !this.show
   }

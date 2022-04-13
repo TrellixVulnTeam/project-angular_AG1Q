@@ -1,15 +1,16 @@
 const express = require('express');
-// const { isAuthenticatedUser, authorizeRoles } = require('../middlewares/auth');
+const { isAuthenticatedUser } = require('../Middlewares/auth');
 const router = express.Router();
 const workouts = require('../models/data')
+const advancedQuery = require('../Middlewares/advanced-query');
 
 
 // protected route on back-end
 router.get('/',async (req, res) => {
     // db and fetch all courses
-
-    let data = await workouts.find();
-    res.json(data);
+    const workout = await workouts.find()
+    // let data = await workouts.find();
+    res.json(workout);
 
 })
 
@@ -26,7 +27,7 @@ router.get('/:id',async (req, res) => {
 
 
     
-router.post('/', async (req, res) => {
+router.post('/', async (req, res) => { 
     // db and insert one course  
     console.log("i am ready",req.body)  
     let data = await workouts.create(req.body);

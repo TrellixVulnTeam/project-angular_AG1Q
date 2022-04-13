@@ -9,7 +9,7 @@ const userRoute=require("./Routes/user")
 const colors = require('colors')
 
 
-const url = 'mongodb://localhost:27017/sivadb';
+const url = 'mongodb://localhost:27017/Ganeshdb';
 const connnectToDB = async () =>{
     await mongoose.connect(url);
    
