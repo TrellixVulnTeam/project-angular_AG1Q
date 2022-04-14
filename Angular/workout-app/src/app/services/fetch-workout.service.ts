@@ -19,4 +19,4 @@ export class FetchWorkoutService {
   getWorkoutData(id: string){
     return this.http.get(baseUrl + id)
   }
-}
+} 

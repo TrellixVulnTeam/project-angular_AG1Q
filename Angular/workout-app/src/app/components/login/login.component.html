@@ -1,12 +1,35 @@
 <h1 class='title'>Login Form</h1>
-<form class='form-card' autoComplete='off' (submit)="onSubmit(email.value, password.value)">
-    <div class='input-card'>
+<form class='form-card' autoComplete='off' [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div class='input-card form-group'>
         <label class='label' for="email">Email Address</label>
-        <input placeholder='Enter email' #email name="email" class='form-control' type="text" id="email"/>
+        <input id="email" [ngClass]="{'has-danger': email?.invalid && (email?.dirty || email?.touched), 'has-success': email?.valid && (email?.dirty || email?.touched) }" placeholder="Enter Email" type="text" name="email" class="form-control outline" autocomplete="off" formControlName="email"/>
+        <div class="form-control-feedback" *ngIf="email?.invalid  && email?.touched" >
+            <p class="error-msg" *ngIf="email?.errors?.['required']">* Email is required!</p>
+            <p *ngIf="email?.errors?.['email']">* Email is Invalid!</p>
+        </div>
     </div>
     <div class='input-card'>
         <label class='label' for="password">Password</label>
-        <input placeholder='Enter password' #password name="password" class='form-control' type="password" id="password"/>
+        <input id="password" [ngClass]="{'has-danger': password?.invalid && (password?.dirty || password?.touched), 'has-success': password?.valid && (password?.dirty || password?.touched) }" placeholder="Enter Password" type="password" name="password" class="form-control outline" autocomplete="off" formControlName="password" />
+        <p class="error-msg" *ngIf="password?.invalid && password?.touched">*Invalid Password</p>
     </div>
-    <button class='button' type="submit">Login</button>
+    <button class='button' type="submit" [disabled]="!loginForm?.valid">Login</button>
 </form>
+<!-- 
+
+<form class="form-card" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <h3 highlight>Login Form</h3>
+    <h3 highlight>Login page</h3>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input id="email" [ngClass]="{'has-danger': email?.invalid && (email?.dirty || email?.touched), 'has-success': email?.valid && (email?.dirty || email?.touched) }" placeholder="Enter Email" type="text" name="email" class="form-control" autocomplete="off" formControlName="email"/>
+        <p class="error" *ngIf="loginForm.get('email')?.invalid  && email?.touched">*Invalid Email</p>
+    </div>
+    <div>
+        <label for="password">Password</label>
+        <input id="password" [ngClass]="{'has-danger': password?.invalid && (password?.dirty || password?.touched), 'has-success': password?.valid && (password?.dirty || password?.touched) }" placeholder="Enter Password" type="password" name="password" class="form-control" autocomplete="off" formControlName="password" />
+        <p class="error" *ngIf="password?.invalid && password?.touched">*Invalid Password</p>
+    </div>
+    <br>
+    <button type="submit" [disabled]="!loginForm?.valid">Submit</button>
+</form> -->

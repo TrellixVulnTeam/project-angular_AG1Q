@@ -16,9 +16,20 @@
     color: #5c69ff;
    
 }
+.has-success{
+    border: 1px solid chartreuse;
+}
+.has-danger{
+    border: 1px solid red;
+}
 .label{
-    font-size: 12px;
+    font-size: 14px;
     color: #323;
+}
+.error-msg{
+    font-size: 13px;
+    color: red;
+    margin-bottom: 1px;
 }
 .button{
     color: #ffffff;
@@ -31,4 +42,7 @@
     margin-bottom: 16px;
     cursor: pointer;
     outline: none;
+}
+.outline{
+    outline: none !important;
 }
