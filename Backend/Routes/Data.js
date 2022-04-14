@@ -6,15 +6,15 @@ const advancedQuery = require('../Middlewares/advanced-query');
 
 
 // protected route on back-end
-router.get('/',[isAuthenticatedUser, advancedQuery(workouts)], async (req, res) => {
+router.get('/', async (req, res) => {
     // db and fetch all courses
-    await workouts.find()
+    let data = await workouts.find()
     // let data = await workouts.find();
-    res.json(res.advancedQueryResult);
+    res.json(data);
 
 })
 
-router.get('/:id', isAuthenticatedUser,async (req, res) => {
+router.get('/:id', async (req, res) => {
     // db and fetch all courses
     console.log(req.params.id)
     console.log("jeffa")

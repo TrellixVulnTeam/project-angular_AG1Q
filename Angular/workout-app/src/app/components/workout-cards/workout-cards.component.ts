@@ -16,5 +16,4 @@ export class WorkoutCardsComponent implements OnInit {
     this.fetchData.getData()
     .subscribe((data: any) => this.workoutList = data)
   }
-
 }
