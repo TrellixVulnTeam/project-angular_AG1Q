@@ -17,7 +17,7 @@
    
 }
 .has-success{
-    border: 1px solid chartreuse;
+    border: 1px solid #5c69ff;
 }
 .has-danger{
     border: 1px solid red;
@@ -42,7 +42,4 @@
     margin-bottom: 16px;
     cursor: pointer;
     outline: none;
-}
-.outline{
-    outline: none !important;
 }

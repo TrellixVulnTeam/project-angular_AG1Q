@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { strictEqual } from 'assert';
 import { LoginService } from 'src/app/services/login.service';
 
 @Component({
@@ -31,11 +30,12 @@ export class LoginComponent implements OnInit {
   onSubmit(){
 
     let obj = {email: this.loginForm.value.email, password: this.loginForm.value.password}
+    console.log(obj)
 
     this.loginService.postUser(obj)
     .subscribe(data => console.log(data))
 
-    this.router.navigate(['/'])
+    this.router.navigate([''])
   }
 
   ngOnInit(): void {

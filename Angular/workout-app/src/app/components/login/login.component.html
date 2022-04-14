@@ -13,7 +13,7 @@
         <input id="password" [ngClass]="{'has-danger': password?.invalid && (password?.dirty || password?.touched), 'has-success': password?.valid && (password?.dirty || password?.touched) }" placeholder="Enter Password" type="password" name="password" class="form-control outline" autocomplete="off" formControlName="password" />
         <p class="error-msg" *ngIf="password?.invalid && password?.touched">*Invalid Password</p>
     </div>
-    <button class='button' type="submit" [disabled]="!loginForm?.valid">Login</button>
+    <button class='button' type="submit" [disabled]="loginForm?.invalid">Login</button>
 </form>
 <!-- 
 
