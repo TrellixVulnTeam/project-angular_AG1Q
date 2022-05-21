@@ -9,7 +9,7 @@
 }
 .card{
     width:400px;
-    height:500px;
+    height:550px;
     margin:15px;
     border-radius:9px !important;
     box-shadow: 2px 2px;
@@ -43,4 +43,10 @@
 }
 .link-card{
     text-decoration: none;
+}
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
 }

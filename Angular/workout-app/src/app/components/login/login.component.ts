@@ -30,7 +30,6 @@ export class LoginComponent implements OnInit {
   onSubmit(){
 
     let obj = {email: this.loginForm.value.email, password: this.loginForm.value.password}
-    console.log(obj)
 
     this.loginService.postUser(obj)
     .subscribe(data => console.log(data))
